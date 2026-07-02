@@ -1,30 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Lavado">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Lavado por encargo">
   <style>
-    .sud { transform-box: fill-box; transform-origin: center; }
-    .u1 { animation: rise 2.6s ease-in-out infinite; }
-    .u2 { animation: rise 3.2s ease-in-out infinite .5s; }
-    .u3 { animation: rise 2.2s ease-in-out infinite 1s; }
-    .u4 { animation: rise 3.0s ease-in-out infinite .3s; }
-    @keyframes rise {
-      0%   { transform: translateY(0) scale(.6); opacity: 0; }
-      25%  { opacity: 1; }
-      100% { transform: translateY(-26px) scale(1.15); opacity: 0; }
+    /* perpetual water surface */
+    .wave { animation: flow 2.4s linear infinite; }
+    @keyframes flow { from { transform: translateX(0); } to { transform: translateX(-40px); } }
+
+    /* garment being agitated in the water */
+    .shirt { transform-box: fill-box; transform-origin: 50px 62px; animation: swish 2.2s ease-in-out infinite; }
+    @keyframes swish {
+      0%, 100% { transform: rotate(-7deg) translateY(0); }
+      50%      { transform: rotate(7deg) translateY(2px); }
     }
-    .bar { transform-box: fill-box; transform-origin: 50px 70px; animation: bob 3.2s ease-in-out infinite; }
-    @keyframes bob { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-2px) rotate(-2deg); } }
-    @media (prefers-reduced-motion: reduce) { .sud, .bar { animation: none; } }
+
+    /* endlessly rising bubbles */
+    .bub { transform-box: fill-box; transform-origin: center; }
+    .p1 { animation: rise 2.8s ease-in infinite; }
+    .p2 { animation: rise 3.6s ease-in infinite .6s; }
+    .p3 { animation: rise 2.4s ease-in infinite 1.1s; }
+    .p4 { animation: rise 3.2s ease-in infinite .3s; }
+    .p5 { animation: rise 2.6s ease-in infinite 1.5s; }
+    @keyframes rise {
+      0%   { transform: translateY(0) scale(.5); opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { opacity: .9; }
+      100% { transform: translateY(-40px) scale(1.15); opacity: 0; }
+    }
+
+    /* foam gently breathing */
+    .foam { transform-box: fill-box; transform-origin: center; animation: foam 3s ease-in-out infinite; }
+    @keyframes foam { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-1.5px) scale(1.04); } }
+
+    @media (prefers-reduced-motion: reduce){ .wave,.shirt,.bub,.foam{ animation:none; } }
   </style>
 
-  <!-- rising soap suds -->
-  <g class="sud u1"><circle cx="34" cy="50" r="5" fill="#A78BFA" fill-opacity="0.25" stroke="#7C5BD0" stroke-width="2"/><circle cx="32.5" cy="48" r="1.4" fill="#fff"/></g>
-  <g class="sud u2"><circle cx="50" cy="46" r="6" fill="#E57399" fill-opacity="0.25" stroke="#D45A84" stroke-width="2"/><circle cx="48" cy="43.5" r="1.6" fill="#fff"/></g>
-  <g class="sud u3"><circle cx="66" cy="50" r="4.5" fill="#1C4475" fill-opacity="0.18" stroke="#1C4475" stroke-width="2"/><circle cx="64.5" cy="48" r="1.3" fill="#fff"/></g>
-  <g class="sud u4"><circle cx="42" cy="42" r="3.5" fill="#2F5A93" fill-opacity="0.18" stroke="#2F5A93" stroke-width="1.8"/></g>
+  <defs>
+    <clipPath id="tubInside">
+      <path d="M23 50 H77 L72 84 a3 3 0 0 1 -3 3 H26 a3 3 0 0 1 -3 -3 Z"/>
+    </clipPath>
+  </defs>
 
-  <!-- soap bar -->
-  <g class="bar">
-    <rect x="26" y="60" width="48" height="28" rx="11" fill="#CDE5F7" stroke="#1C4475" stroke-width="4"/>
-    <path d="M34 68 q8 -4 18 0" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85"/>
-    <path d="M36 78 q14 -3 26 0" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  <!-- rising bubbles (behind, coming up out of the tub) -->
+  <g class="bub p1"><circle cx="34" cy="46" r="4"   fill="#A78BFA" fill-opacity=".28" stroke="#7C5BD0" stroke-width="1.8"/><circle cx="32.5" cy="44.5" r="1.2" fill="#fff"/></g>
+  <g class="bub p2"><circle cx="50" cy="44" r="5.5" fill="#E57399" fill-opacity=".26" stroke="#D45A84" stroke-width="1.8"/><circle cx="48" cy="42" r="1.5" fill="#fff"/></g>
+  <g class="bub p3"><circle cx="66" cy="46" r="3.5" fill="#1C4475" fill-opacity=".18" stroke="#1C4475" stroke-width="1.8"/><circle cx="64.7" cy="44.5" r="1.1" fill="#fff"/></g>
+  <g class="bub p4"><circle cx="42" cy="42" r="3"   fill="#2F5A93" fill-opacity=".18" stroke="#2F5A93" stroke-width="1.6"/></g>
+  <g class="bub p5"><circle cx="60" cy="42" r="2.6" fill="#A78BFA" fill-opacity=".28" stroke="#7C5BD0" stroke-width="1.6"/></g>
+
+  <!-- wooden wash tub body -->
+  <path d="M18 48 H82 L76 86 a5 5 0 0 1 -5 4 H29 a5 5 0 0 1 -5 -4 Z" fill="#C68A4E" stroke="#8A5A28" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- staves -->
+  <path d="M33 51 l-2 37 M46 51 l-1 38 M54 51 l1 38 M67 51 l2 37" stroke="#8A5A28" stroke-width="2" stroke-opacity=".45"/>
+  <!-- steel hoops -->
+  <path d="M21 64 H79" stroke="#9AA6B2" stroke-width="3" stroke-opacity=".8"/>
+  <path d="M24 78 H76" stroke="#9AA6B2" stroke-width="3" stroke-opacity=".8"/>
+
+  <!-- water + waves (clipped inside tub) -->
+  <g clip-path="url(#tubInside)">
+    <rect x="18" y="54" width="64" height="40" fill="#8FC1EC"/>
+    <!-- perpetual moving wave surface -->
+    <path class="wave" d="M-20 55 q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 V94 H-20 Z" fill="#B7DAF5"/>
+    <path class="wave" d="M-20 58 q10 -4 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 V94 H-20 Z" fill="#8FC1EC"/>
+
+    <!-- garment swishing in the water -->
+    <path class="shirt" d="M50 46 L42 49 L34 57 L39 62 L44 59 L44 78 H56 L56 59 L61 62 L66 57 L58 49 Z"
+          fill="#E57399" stroke="#C24A75" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- tub rim on top -->
+  <rect x="14" y="44" width="72" height="9" rx="4.5" fill="#B0763C" stroke="#8A5A28" stroke-width="3"/>
+  <path d="M20 48.5 h60" stroke="#E2B57E" stroke-width="1.6" stroke-opacity=".6"/>
+
+  <!-- foam suds sitting on the rim -->
+  <g class="foam" fill="#FFFFFF">
+    <circle cx="30" cy="46" r="4.5"/>
+    <circle cx="37" cy="44" r="5.5"/>
+    <circle cx="45" cy="46" r="4"/>
+    <circle cx="62" cy="45" r="5"/>
+    <circle cx="70" cy="46.5" r="4"/>
+    <circle cx="55" cy="45.5" r="3.5"/>
   </g>
 </svg>
