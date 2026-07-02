@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Servicio rápido">
+  <style>
+    .hand { transform-box: fill-box; transform-origin: 54px 54px; animation: tick 1.6s cubic-bezier(.4,0,.2,1) infinite; }
+    @keyframes tick { to { transform: rotate(360deg); } }
+    .speed { animation: dash 1s ease-in-out infinite alternate; transform-box: fill-box; }
+    .sp1 { animation-delay: 0s; }
+    .sp2 { animation-delay: .15s; }
+    .sp3 { animation-delay: .3s; }
+    @keyframes dash { from { transform: translateX(0); opacity:.4; } to { transform: translateX(-5px); opacity:1; } }
+    @media (prefers-reduced-motion: reduce) { .hand, .speed { animation: none; } }
+  </style>
+
+  <!-- speed lines -->
+  <g stroke="#A78BFA" stroke-width="4" stroke-linecap="round">
+    <line class="speed sp1" x1="6"  y1="40" x2="20" y2="40"/>
+    <line class="speed sp2" x1="2"  y1="54" x2="18" y2="54"/>
+    <line class="speed sp3" x1="6"  y1="68" x2="20" y2="68"/>
+  </g>
+
+  <!-- clock face -->
+  <circle cx="54" cy="54" r="32" fill="#FFFFFF" stroke="#1C4475" stroke-width="4"/>
+  <circle cx="54" cy="54" r="32" fill="none" stroke="#CDE5F7" stroke-width="2"/>
+  <!-- ticks -->
+  <g stroke="#1C4475" stroke-width="3" stroke-linecap="round">
+    <line x1="54" y1="26" x2="54" y2="31"/>
+    <line x1="82" y1="54" x2="77" y2="54"/>
+    <line x1="54" y1="82" x2="54" y2="77"/>
+    <line x1="26" y1="54" x2="31" y2="54"/>
+  </g>
+  <!-- hour hand (static) -->
+  <line x1="54" y1="54" x2="54" y2="38" stroke="#1C4475" stroke-width="4" stroke-linecap="round"/>
+  <!-- sweeping hand -->
+  <line class="hand" x1="54" y1="56" x2="54" y2="32" stroke="#E57399" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="54" cy="54" r="4" fill="#E57399"/>
+</svg>

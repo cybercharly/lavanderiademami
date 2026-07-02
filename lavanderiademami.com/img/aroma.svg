@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Aroma a hogar">
+  <style>
+    .wave { animation: waft 3s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
+    .w1 { animation-delay: 0s; }
+    .w2 { animation-delay: .6s; }
+    .w3 { animation-delay: 1.2s; }
+    @keyframes waft {
+      0%   { opacity: 0; transform: translateY(6px) scaleY(.8); }
+      35%  { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-16px) scaleY(1.1); }
+    }
+    .leaf { transform-box: fill-box; transform-origin: 50px 78px; animation: nod 3.6s ease-in-out infinite; }
+    @keyframes nod { 0%,100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+    @media (prefers-reduced-motion: reduce) { .wave, .leaf { animation: none; } }
+  </style>
+
+  <!-- rising aroma / fragrance waves -->
+  <g fill="none" stroke-width="4" stroke-linecap="round">
+    <path class="wave w1" d="M34 50 q-6 -8 0 -16 q6 -8 0 -16" stroke="#A78BFA"/>
+    <path class="wave w2" d="M50 52 q-6 -8 0 -16 q6 -8 0 -16" stroke="#E57399"/>
+    <path class="wave w3" d="M66 50 q-6 -8 0 -16 q6 -8 0 -16" stroke="#1C4475"/>
+  </g>
+
+  <!-- leaf (fresh, home scent) -->
+  <g class="leaf">
+    <path d="M50 86 C30 78 30 56 50 52 C70 56 70 78 50 86 Z" fill="#A78BFA" stroke="#7C5BD0" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M50 84 V56" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M50 66 l8 -5 M50 72 l-8 -5 M50 78 l8 -5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+</svg>

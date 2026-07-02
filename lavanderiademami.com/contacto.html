@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | La Lavandería de Mami</title>
+  <meta name="description" content="Contáctanos para agendar tu lavado, secado, planchado o renta de lavadora. Escríbenos por WhatsApp o visítanos.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          'brand-ivory':       '#FAF8F2',
+          'brand-sky':         '#CDE5F7',
+          'brand-sky-dark':    '#A9D3F2',
+          'brand-blue':        '#1C4475',
+          'brand-blue-soft':   '#2F5A93',
+          'brand-pink':        '#E57399',
+          'brand-pink-dark':   '#D45A84',
+          'brand-lavender':    '#A78BFA',
+          'brand-lavender-soft':'#EDE7FE',
+        },
+        fontFamily: { sans: ['Poppins','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-brand-ivory font-sans text-brand-blue">
+
+  <!-- TOP BAR -->
+  <div class="bg-brand-blue text-white text-xs sm:text-sm py-2 px-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-y-1">
+      <div class="flex items-center gap-4 flex-wrap">
+        <a href="tel:+523322562719" class="flex items-center gap-1 hover:text-brand-pink transition">
+          <i class="fas fa-phone text-brand-lavender"></i> +52 33 2256 2719
+        </a>
+        <a href="mailto:contacto@lavanderiademami.com" class="hidden sm:flex items-center gap-1 hover:text-brand-pink transition">
+          <i class="fas fa-envelope text-brand-lavender"></i> contacto@lavanderiademami.com
+        </a>
+      </div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="flex items-center gap-1"><i class="fas fa-clock text-brand-lavender"></i> Lun a Vie · 9:00 - 18:00</span>
+        <span class="hidden md:flex items-center gap-1 text-brand-sky"><i class="fas fa-soap"></i> Recogemos y entregamos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="bg-brand-ivory/95 backdrop-blur shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="img/perfil_lavanderia.png" alt="La Lavandería de Mami" class="h-12 w-12 object-cover rounded-full logo-spin">
+        <div class="hidden sm:block leading-tight">
+          <div class="font-bold text-brand-blue text-base">La Lavandería de Mami</div>
+          <div class="text-xs text-brand-blue-soft">Limpio, fresco y con olor a hogar</div>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html"     class="nav-link text-brand-blue hover:text-brand-pink font-medium transition-colors">Inicio</a>
+        <a href="servicios.html" class="nav-link text-brand-blue hover:text-brand-pink font-medium transition-colors">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-brand-blue hover:text-brand-pink font-medium transition-colors">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-brand-blue hover:text-brand-pink font-medium transition-colors">Contacto</a>
+        <a data-wa="Hola, los encontré en su sitio web y quisiera agendar un servicio de lavandería. ¿Me pueden ayudar?"
+           class="bg-brand-pink hover:bg-brand-pink-dark text-white font-semibold px-5 py-2 rounded-full flex items-center gap-2 transition-colors text-sm">
+          <i class="fab fa-whatsapp"></i> Agendar servicio
+        </a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-brand-blue p-2 text-2xl" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden bg-brand-ivory border-t border-brand-sky">
+      <div class="px-4 py-3 flex flex-col gap-1">
+        <a href="index.html"     class="nav-link text-brand-blue font-medium py-3 border-b border-brand-sky hover:text-brand-pink">Inicio</a>
+        <a href="servicios.html" class="nav-link text-brand-blue font-medium py-3 border-b border-brand-sky hover:text-brand-pink">Servicios</a>
+        <a href="nosotros.html"  class="nav-link text-brand-blue font-medium py-3 border-b border-brand-sky hover:text-brand-pink">Nosotros</a>
+        <a href="contacto.html"  class="nav-link text-brand-blue font-medium py-3 border-b border-brand-sky hover:text-brand-pink">Contacto</a>
+        <a data-wa="Hola, los encontré en su sitio web y quisiera agendar un servicio de lavandería. ¿Me pueden ayudar?"
+           class="mt-2 bg-brand-pink text-white font-semibold py-3 rounded-full text-center flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="hero-gradient text-white py-16 relative overflow-hidden">
+    <span class="bubble" style="width:80px;height:80px;top:18%;left:12%;"></span>
+    <span class="bubble" style="width:110px;height:110px;top:32%;right:10%;animation-delay:.8s;"></span>
+    <div class="max-w-4xl mx-auto px-4 text-center relative">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fadeInUp">Contáctanos</h1>
+      <p class="text-brand-sky text-lg max-w-2xl mx-auto animate-fadeInUp delay-100">
+        Agenda tu servicio o pregúntanos lo que necesites. ¡Estamos para ayudarte!
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="py-16 bg-brand-ivory">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-10">
+
+      <!-- INFO + FORM -->
+      <div class="reveal">
+        <h2 class="text-2xl font-bold section-title left mb-6">Escríbenos</h2>
+
+        <!-- Tarjetas de contacto -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+          <a data-wa="" class="flex items-center gap-3 bg-white rounded-2xl p-4 shadow service-card">
+            <div class="w-11 h-11 bg-green-100 rounded-full flex items-center justify-center shrink-0">
+              <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+            </div>
+            <div>
+              <div class="text-xs text-brand-blue-soft">WhatsApp</div>
+              <div class="font-semibold text-brand-blue text-sm">+52 33 2256 2719</div>
+            </div>
+          </a>
+          <a href="tel:+523322562719" class="flex items-center gap-3 bg-white rounded-2xl p-4 shadow service-card">
+            <div class="w-11 h-11 bg-brand-sky rounded-full flex items-center justify-center shrink-0">
+              <i class="fas fa-phone text-brand-blue"></i>
+            </div>
+            <div>
+              <div class="text-xs text-brand-blue-soft">Teléfono</div>
+              <div class="font-semibold text-brand-blue text-sm">+52 33 2256 2719</div>
+            </div>
+          </a>
+          <a href="mailto:contacto@lavanderiademami.com" class="flex items-center gap-3 bg-white rounded-2xl p-4 shadow service-card">
+            <div class="w-11 h-11 bg-brand-lavender-soft rounded-full flex items-center justify-center shrink-0">
+              <i class="fas fa-envelope text-brand-lavender"></i>
+            </div>
+            <div>
+              <div class="text-xs text-brand-blue-soft">Email</div>
+              <div class="font-semibold text-brand-blue text-xs break-all">contacto@lavanderiademami.com</div>
+            </div>
+          </a>
+          <div class="flex items-center gap-3 bg-white rounded-2xl p-4 shadow">
+            <div class="w-11 h-11 bg-brand-sky rounded-full flex items-center justify-center shrink-0">
+              <i class="fas fa-clock text-brand-blue"></i>
+            </div>
+            <div>
+              <div class="text-xs text-brand-blue-soft">Horario</div>
+              <div class="font-semibold text-brand-blue text-sm">Lun a Vie · 9-18 h</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <form id="contact-form" class="bg-white rounded-2xl p-6 shadow space-y-4">
+          <p class="text-sm text-brand-blue-soft">Llena el formulario y se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+          <div>
+            <label for="f-nombre" class="block text-sm font-semibold mb-1">Nombre *</label>
+            <input id="f-nombre" type="text" required placeholder="Tu nombre"
+                   class="w-full border border-brand-sky-dark rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-pink">
+          </div>
+          <div>
+            <label for="f-telefono" class="block text-sm font-semibold mb-1">Teléfono</label>
+            <input id="f-telefono" type="tel" placeholder="Tu teléfono (opcional)"
+                   class="w-full border border-brand-sky-dark rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-pink">
+          </div>
+          <div>
+            <label for="f-servicio" class="block text-sm font-semibold mb-1">Servicio de interés *</label>
+            <select id="f-servicio" required
+                    class="w-full border border-brand-sky-dark rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-pink bg-white">
+              <option value="Lavado por encargo">Lavado por encargo</option>
+              <option value="Secado">Secado</option>
+              <option value="Planchado">Planchado</option>
+              <option value="Renta de lavadora">Renta de lavadora</option>
+              <option value="Recolección y entrega">Recolección y entrega</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-detalle" class="block text-sm font-semibold mb-1">Detalle</label>
+            <textarea id="f-detalle" rows="3" placeholder="Cuéntanos qué necesitas (cantidad de ropa, fecha, etc.)"
+                      class="w-full border border-brand-sky-dark rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-pink"></textarea>
+          </div>
+          <button type="submit" class="btn-pink w-full justify-center">
+            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <!-- MAPA + UBICACIÓN -->
+      <div class="reveal delay-100">
+        <h2 class="text-2xl font-bold section-title left mb-6">Visítanos</h2>
+        <div class="bg-white rounded-2xl p-4 shadow mb-4">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-brand-pink text-xl mt-1"></i>
+            <div>
+              <div class="font-semibold text-brand-blue">Dirección</div>
+              <p class="text-sm text-brand-blue-soft">Dirección por confirmar · Guadalajara, Jalisco</p>
+              <a href="https://maps.app.goo.gl/8P4XAdqANLe5EKXn8" target="_blank" rel="noopener"
+                 class="text-brand-pink text-sm font-semibold hover:underline inline-flex items-center gap-1 mt-1">
+                <i class="fas fa-diamond-turn-right"></i> Cómo llegar
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4472.301004309128!2d-103.25487422413767!3d20.4872969061544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4a3c847ed2bf%3A0xb3a17d89431b6dc!2sRamag%20Industrial!5e1!3m2!1ses-419!2smx!4v1776733794547!5m2!1ses-419!2smx"
+            width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-blue text-brand-sky py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="img/logo.svg" alt="Logo" class="h-12 w-12 object-contain">
+            <div>
+              <div class="text-white font-bold">La Lavandería de Mami</div>
+              <div class="text-xs text-brand-sky-dark">Limpio, fresco y con olor a hogar</div>
+            </div>
+          </div>
+          <p class="text-sm text-brand-sky/80">Lavado, secado y planchado por encargo, además de renta de lavadoras de autoservicio.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Navegación</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html"     class="hover:text-brand-pink transition">Inicio</a></li>
+            <li><a href="servicios.html" class="hover:text-brand-pink transition">Servicios</a></li>
+            <li><a href="nosotros.html"  class="hover:text-brand-pink transition">Nosotros</a></li>
+            <li><a href="contacto.html"  class="hover:text-brand-pink transition">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <i class="fas fa-map-marker-alt text-brand-lavender mt-1 shrink-0"></i>
+              <span>Dirección por confirmar · Guadalajara, Jal.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fab fa-whatsapp text-brand-pink"></i>
+              <a data-wa="" class="hover:text-brand-pink transition">+52 33 2256 2719</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-envelope text-brand-lavender"></i>
+              <a href="mailto:contacto@lavanderiademami.com" class="hover:text-brand-pink transition break-all">contacto@lavanderiademami.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-clock text-brand-lavender"></i>
+              <span>Lunes a viernes · 9:00 a 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-brand-blue-soft pt-6 text-center text-sm text-brand-sky/70">
+        © <span data-year>2026</span> La Lavandería de Mami. Todos los derechos reservados. Guadalajara, Jalisco, México.
+        <div class="mt-1 text-xs text-brand-sky/50">Diseño y desarrollo por <a href="https://www.linkedin.com/in/jcprzhdz/" target="_blank" rel="noopener" class="hover:text-brand-pink transition">cybercharly</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <a data-wa="Hola, los encontré en su sitio web y quisiera información sobre sus servicios de lavandería." class="whatsapp-float">
+    <i class="fab fa-whatsapp text-xl"></i>
+    <span class="hidden sm:inline">¿En qué te ayudamos?</span>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

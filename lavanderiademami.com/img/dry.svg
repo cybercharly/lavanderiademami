@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Secado">
+  <style>
+    .shirt { transform-box: fill-box; transform-origin: 50px 24px; animation: swing 3s ease-in-out infinite; }
+    @keyframes swing { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+    .gust { animation: blow 1.4s ease-in-out infinite; transform-box: fill-box; }
+    .g1 { animation-delay: 0s; }
+    .g2 { animation-delay: .35s; }
+    .g3 { animation-delay: .7s; }
+    @keyframes blow { 0% { transform: translateX(0); opacity: .2; } 50% { opacity: 1; } 100% { transform: translateX(10px); opacity: .2; } }
+    @media (prefers-reduced-motion: reduce) { .shirt, .gust { animation: none; } }
+  </style>
+
+  <!-- clothesline -->
+  <line x1="6" y1="22" x2="94" y2="22" stroke="#8A5A28" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- hanging shirt that sways like it's drying in the breeze -->
+  <g class="shirt">
+    <!-- hanger hook -->
+    <path d="M50 22 v6" stroke="#1C4475" stroke-width="2.5" fill="none"/>
+    <!-- shirt body with sleeves -->
+    <path d="M50 30
+             L40 34 L30 44 L36 50 L42 46
+             L42 78 a3 3 0 0 0 3 3 H55 a3 3 0 0 0 3 -3
+             L58 46 L64 50 L70 44 L60 34 Z"
+          fill="#CDE5F7" stroke="#1C4475" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- collar -->
+    <path d="M44 32 l6 5 6 -5" fill="none" stroke="#1C4475" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- breeze gusts -->
+  <g fill="none" stroke="#A78BFA" stroke-width="4" stroke-linecap="round">
+    <path class="gust g1" d="M12 60 q8 -4 16 0"/>
+    <path class="gust g2" d="M8 72 q10 -4 18 0"/>
+    <path class="gust g3" d="M14 84 q8 -4 16 0"/>
+  </g>
+</svg>

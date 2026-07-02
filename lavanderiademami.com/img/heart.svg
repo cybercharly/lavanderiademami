@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Valores">
+  <style>
+    .beat { transform-box: fill-box; transform-origin: 50px 54px; animation: beat 1.6s ease-in-out infinite; }
+    @keyframes beat { 0%,100% { transform: scale(1); } 15% { transform: scale(1.14); } 30% { transform: scale(1); } 45% { transform: scale(1.08); } }
+    .spk { transform-box: fill-box; transform-origin: center; animation: tw 2.2s ease-in-out infinite .4s; }
+    @keyframes tw { 0%,100% { transform: scale(.4); opacity:.3; } 50% { transform: scale(1); opacity:1; } }
+    @media (prefers-reduced-motion: reduce){ .beat,.spk{ animation:none; } }
+  </style>
+
+  <g class="beat">
+    <path d="M50 80 C20 60 18 36 34 28 C44 23 50 30 50 34 C50 30 56 23 66 28 C82 36 80 60 50 80 Z"
+          fill="#E57399" stroke="#C24A75" stroke-width="4" stroke-linejoin="round"/>
+    <!-- shine -->
+    <path d="M40 38 q-4 5 -1 11" stroke="#fff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity=".8"/>
+  </g>
+
+  <path class="spk" d="M76 34 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z" fill="#A78BFA"/>
+</svg>

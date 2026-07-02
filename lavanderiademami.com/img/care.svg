@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Cuidado premium">
+  <style>
+    .spk { transform-box: fill-box; transform-origin: center; }
+    .k1 { animation: twinkle 2s ease-in-out infinite; }
+    .k2 { animation: twinkle 2s ease-in-out infinite .7s; }
+    .k3 { animation: twinkle 2s ease-in-out infinite 1.3s; }
+    @keyframes twinkle {
+      0%, 100% { transform: scale(0.5); opacity: 0.3; }
+      50%      { transform: scale(1);   opacity: 1; }
+    }
+    .shirt { transform-box: fill-box; transform-origin: 50px 50px; animation: bob 3.4s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    @media (prefers-reduced-motion: reduce) { .spk, .shirt { animation: none; } }
+  </style>
+
+  <!-- folded shirt -->
+  <g class="shirt">
+    <!-- collar -->
+    <path d="M38 28 l12 8 l12 -8 l8 6 -8 12 -12 -4 -12 4 -8 -12 z" fill="#A78BFA" stroke="#7C5BD0" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- body -->
+    <path d="M30 40 l8 -6 12 8 12 -8 8 6 4 34 a4 4 0 0 1 -4 4 H30 a4 4 0 0 1 -4 -4 z" fill="#CDE5F7" stroke="#1C4475" stroke-width="3" stroke-linejoin="round"/>
+    <!-- buttons -->
+    <circle cx="50" cy="50" r="1.8" fill="#1C4475"/>
+    <circle cx="50" cy="60" r="1.8" fill="#1C4475"/>
+    <circle cx="50" cy="70" r="1.8" fill="#1C4475"/>
+  </g>
+
+  <!-- twinkling sparkles (the "premium" shine) -->
+  <g fill="#E57399">
+    <path class="spk k1" d="M76 26 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z"/>
+  </g>
+  <g fill="#A78BFA">
+    <path class="spk k2" d="M22 62 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 z"/>
+  </g>
+  <g fill="#1C4475">
+    <path class="spk k3" d="M80 64 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z"/>
+  </g>
+</svg>

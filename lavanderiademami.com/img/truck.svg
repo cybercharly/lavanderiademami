@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Recolección y entrega">
+  <style>
+    .truck { transform-box: fill-box; transform-origin: center; animation: drive 2.6s ease-in-out infinite; }
+    @keyframes drive { 0%,100% { transform: translateX(-3px); } 50% { transform: translateX(3px); } }
+    .wheel { transform-box: fill-box; transform-origin: center; animation: roll 1.2s linear infinite; }
+    @keyframes roll { to { transform: rotate(360deg); } }
+    .line { animation: blow 1.2s ease-in-out infinite; transform-box: fill-box; }
+    .l2 { animation-delay: .25s; } .l3 { animation-delay: .5s; }
+    @keyframes blow { 0% { transform: translateX(0); opacity:.2; } 50% { opacity:1; } 100% { transform: translateX(10px); opacity:.2; } }
+    @media (prefers-reduced-motion: reduce){ .truck,.wheel,.line{ animation:none; } }
+  </style>
+
+  <!-- motion lines -->
+  <g stroke="#A78BFA" stroke-width="4" stroke-linecap="round">
+    <line class="line l1" x1="4"  y1="44" x2="16" y2="44"/>
+    <line class="line l2" x1="2"  y1="56" x2="14" y2="56"/>
+    <line class="line l3" x1="6"  y1="68" x2="16" y2="68"/>
+  </g>
+
+  <g class="truck">
+    <!-- cargo box -->
+    <rect x="22" y="38" width="38" height="32" rx="4" fill="#CDE5F7" stroke="#1C4475" stroke-width="3.5"/>
+    <!-- cabin -->
+    <path d="M60 46 h12 l10 12 v12 h-22 z" fill="#2F5A93" stroke="#1C4475" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- window -->
+    <path d="M63 49 h7 l6 8 h-13 z" fill="#EAF4FE" stroke="#1C4475" stroke-width="2" stroke-linejoin="round"/>
+    <!-- heart on the box -->
+    <path d="M40 52 l-1 -1 c-3 -2.6 -5 -4.4 -5 -6.6 a2.6 2.6 0 0 1 5 -1.4 a2.6 2.6 0 0 1 5 1.4 c0 2.2 -2 4 -5 6.6 z" fill="#E57399"/>
+  </g>
+
+  <!-- wheels -->
+  <g>
+    <circle class="wheel" cx="34" cy="76" r="8" fill="#1C4475"/>
+    <circle cx="34" cy="76" r="3" fill="#CDE5F7"/>
+    <circle class="wheel" cx="70" cy="76" r="8" fill="#1C4475"/>
+    <circle cx="70" cy="76" r="3" fill="#CDE5F7"/>
+  </g>
+</svg>

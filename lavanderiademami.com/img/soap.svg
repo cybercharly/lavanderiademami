@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Lavado">
+  <style>
+    .sud { transform-box: fill-box; transform-origin: center; }
+    .u1 { animation: rise 2.6s ease-in-out infinite; }
+    .u2 { animation: rise 3.2s ease-in-out infinite .5s; }
+    .u3 { animation: rise 2.2s ease-in-out infinite 1s; }
+    .u4 { animation: rise 3.0s ease-in-out infinite .3s; }
+    @keyframes rise {
+      0%   { transform: translateY(0) scale(.6); opacity: 0; }
+      25%  { opacity: 1; }
+      100% { transform: translateY(-26px) scale(1.15); opacity: 0; }
+    }
+    .bar { transform-box: fill-box; transform-origin: 50px 70px; animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-2px) rotate(-2deg); } }
+    @media (prefers-reduced-motion: reduce) { .sud, .bar { animation: none; } }
+  </style>
+
+  <!-- rising soap suds -->
+  <g class="sud u1"><circle cx="34" cy="50" r="5" fill="#A78BFA" fill-opacity="0.25" stroke="#7C5BD0" stroke-width="2"/><circle cx="32.5" cy="48" r="1.4" fill="#fff"/></g>
+  <g class="sud u2"><circle cx="50" cy="46" r="6" fill="#E57399" fill-opacity="0.25" stroke="#D45A84" stroke-width="2"/><circle cx="48" cy="43.5" r="1.6" fill="#fff"/></g>
+  <g class="sud u3"><circle cx="66" cy="50" r="4.5" fill="#1C4475" fill-opacity="0.18" stroke="#1C4475" stroke-width="2"/><circle cx="64.5" cy="48" r="1.3" fill="#fff"/></g>
+  <g class="sud u4"><circle cx="42" cy="42" r="3.5" fill="#2F5A93" fill-opacity="0.18" stroke="#2F5A93" stroke-width="1.8"/></g>
+
+  <!-- soap bar -->
+  <g class="bar">
+    <rect x="26" y="60" width="48" height="28" rx="11" fill="#CDE5F7" stroke="#1C4475" stroke-width="4"/>
+    <path d="M34 68 q8 -4 18 0" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M36 78 q14 -3 26 0" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+</svg>

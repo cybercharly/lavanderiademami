@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Calidad">
+  <style>
+    .star { transform-box: fill-box; transform-origin: 50px 52px; animation: shine 3s ease-in-out infinite; }
+    @keyframes shine { 0%,100% { transform: rotate(-6deg) scale(1); } 50% { transform: rotate(6deg) scale(1.08); } }
+    .spk { transform-box: fill-box; transform-origin: center; }
+    .s1 { animation: tw 1.8s ease-in-out infinite; }
+    .s2 { animation: tw 1.8s ease-in-out infinite .6s; }
+    @keyframes tw { 0%,100% { transform: scale(.3); opacity:.2; } 50% { transform: scale(1); opacity:1; } }
+    @media (prefers-reduced-motion: reduce){ .star,.spk{ animation:none; } }
+  </style>
+
+  <g class="star">
+    <path d="M50 20 l9 19 21 3 -15 15 4 21 -19 -10 -19 10 4 -21 -15 -15 21 -3 z"
+          fill="#A78BFA" stroke="#7C5BD0" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M44 40 q-4 5 -2 12" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".8"/>
+  </g>
+
+  <path class="spk s1" d="M22 28 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z" fill="#E57399"/>
+  <path class="spk s2" d="M80 64 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6 z" fill="#1C4475"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Edredones y cobijas">
+  <style>
+    .stack { transform-box: fill-box; transform-origin: 50px 80px; animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .spk { transform-box: fill-box; transform-origin: center; animation: tw 2s ease-in-out infinite; }
+    @keyframes tw { 0%,100% { transform: scale(.4); opacity:.3; } 50% { transform: scale(1); opacity:1; } }
+    @media (prefers-reduced-motion: reduce){ .stack,.spk{ animation:none; } }
+  </style>
+
+  <!-- stacked folded linens -->
+  <g class="stack">
+    <rect x="24" y="64" width="52" height="16" rx="6" fill="#E57399" stroke="#C24A75" stroke-width="3"/>
+    <path d="M30 72 h40" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+
+    <rect x="27" y="48" width="46" height="16" rx="6" fill="#A78BFA" stroke="#7C5BD0" stroke-width="3"/>
+    <path d="M33 56 h34" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".7"/>
+
+    <rect x="30" y="32" width="40" height="16" rx="6" fill="#CDE5F7" stroke="#1C4475" stroke-width="3"/>
+    <path d="M36 40 h28" stroke="#1C4475" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <!-- cozy sparkle -->
+  <path class="spk" d="M80 30 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 z" fill="#A78BFA"/>
+</svg>

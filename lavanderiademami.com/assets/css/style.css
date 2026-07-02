@@ -1,0 +1,231 @@
+/* ================================================
+   LA LAVANDERÍA DE MAMI - Estilos Globales
+   ================================================ */
+
+:root {
+  --color-ivory:    #FAF8F2; /* Fondo principal (warm ivory) */
+  --color-sky:      #CDE5F7; /* Bloques / secciones (soft sky blue) */
+  --color-sky-dark: #A9D3F2;
+  --color-blue:     #1C4475; /* Títulos y texto base (deep trust blue) */
+  --color-blue-soft:#2F5A93;
+  --color-pink:     #E57399; /* Botones / destacados (mami pink) */
+  --color-pink-dark:#D45A84;
+  --color-lavender: #A78BFA; /* Iconos y acentos (clean lavender) */
+  --color-lavender-soft:#EDE7FE;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-ivory);
+}
+
+/* ---- Navbar ---- */
+.nav-link.active {
+  color: var(--color-pink);
+  font-weight: 700;
+}
+.nav-link.active::after { width: 100%; }
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--color-pink);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ---- Mobile menu ---- */
+#mobile-menu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+#mobile-menu.open {
+  max-height: 520px;
+  opacity: 1;
+}
+
+/* ---- Hero ---- */
+.hero-gradient {
+  background: linear-gradient(135deg, #1C4475 0%, #2F5A93 45%, #A78BFA 120%);
+}
+
+/* 3D floating soap bubbles decoration (hero / blue zones) */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  /* glossy 3D sphere: bright highlight top-left, soapy sheen, soft edge */
+  background:
+    radial-gradient(circle at 30% 26%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.45) 12%, rgba(255,255,255,0.12) 38%, rgba(167,139,250,0.10) 70%, rgba(205,229,247,0.04) 100%);
+  box-shadow:
+    inset -6px -8px 14px rgba(28,68,117,0.18),
+    inset 6px 8px 16px rgba(255,255,255,0.55),
+    0 6px 18px rgba(255,255,255,0.10);
+  backdrop-filter: blur(1px);
+  animation: floatBubble 7s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+/* tiny specular dot to sell the 3D look */
+.bubble::after {
+  content: '';
+  position: absolute;
+  top: 16%;
+  left: 22%;
+  width: 22%;
+  height: 22%;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  filter: blur(0.5px);
+}
+@keyframes floatBubble {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg);          opacity: 0.55; }
+  25%  { transform: translate(10px, -22px) scale(1.06) rotate(4deg); opacity: 0.85; }
+  50%  { transform: translate(-6px, -44px) scale(0.94) rotate(-3deg); opacity: 0.9; }
+  75%  { transform: translate(-12px, -22px) scale(1.04) rotate(3deg); opacity: 0.8; }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg);          opacity: 0.55; }
+}
+
+/* ---- Buttons ---- */
+.btn-pink {
+  background: var(--color-pink);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.btn-pink:hover {
+  background: var(--color-pink-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(229, 115, 153, 0.45);
+}
+
+.btn-blue {
+  background: var(--color-blue);
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.btn-blue:hover {
+  background: var(--color-blue-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(28, 68, 117, 0.35);
+}
+
+.btn-outline {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.45);
+  color: #fff;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.24); }
+
+/* ---- Service cards ---- */
+.service-card {
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1px solid #EFEAE0;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(28, 68, 117, 0.14);
+}
+
+/* ---- Section title accent ---- */
+.section-title { color: var(--color-blue); }
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--color-pink);
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+.section-title.left::after { margin: 14px 0 0; }
+
+/* ---- WhatsApp floating button ---- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50px;
+  padding: 13px 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.55);
+}
+
+/* ---- Logo spin-on-hover (gentle) ---- */
+.logo-spin { transition: transform 0.6s ease; }
+a:hover > .logo-spin { transform: rotate(-6deg) scale(1.05); }
+
+/* ---- Animations ---- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.7s ease both; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Reveal-on-scroll helper (JS toggles .visible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeInUp, .bubble { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

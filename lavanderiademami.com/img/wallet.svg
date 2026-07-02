@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Precio justo">
+  <style>
+    .coin { transform-box: fill-box; transform-origin: 64px 34px; animation: drop 2.6s ease-in-out infinite; }
+    @keyframes drop {
+      0%   { transform: translateY(-16px) scale(.6); opacity: 0; }
+      30%  { opacity: 1; }
+      60%  { transform: translateY(6px) scale(1); opacity: 1; }
+      80%  { transform: translateY(0); }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    .wallet { transform-box: fill-box; transform-origin: 50px 64px; animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+    @media (prefers-reduced-motion: reduce){ .coin,.wallet{ animation:none; } }
+  </style>
+
+  <!-- dropping coin -->
+  <g class="coin">
+    <circle cx="64" cy="34" r="11" fill="#E57399" stroke="#C24A75" stroke-width="3"/>
+    <text x="64" y="39" font-family="Poppins, sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">$</text>
+  </g>
+
+  <!-- wallet -->
+  <g class="wallet">
+    <rect x="22" y="48" width="56" height="36" rx="8" fill="#2F5A93" stroke="#1C4475" stroke-width="3.5"/>
+    <path d="M22 56 h56" stroke="#1C4475" stroke-width="2" opacity=".4"/>
+    <!-- flap pocket -->
+    <path d="M50 60 h32 a4 4 0 0 1 4 4 v8 a4 4 0 0 1 -4 4 H50 z" fill="#CDE5F7" stroke="#1C4475" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="60" cy="68" r="4" fill="#A78BFA"/>
+  </g>
+</svg>

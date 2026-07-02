@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Misión">
+  <style>
+    .pulse { transform-box: fill-box; transform-origin: 50px 50px; animation: pulse 2.4s ease-out infinite; }
+    @keyframes pulse { 0% { transform: scale(.6); opacity:.8; } 100% { transform: scale(1.5); opacity:0; } }
+    .dart { transform-box: fill-box; transform-origin: 50px 50px; animation: hit 2.4s ease-in-out infinite; }
+    @keyframes hit { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    @media (prefers-reduced-motion: reduce){ .pulse,.dart{ animation:none; } }
+  </style>
+
+  <!-- expanding pulse ring -->
+  <circle class="pulse" cx="50" cy="50" r="30" fill="none" stroke="#A78BFA" stroke-width="4"/>
+
+  <!-- target rings -->
+  <circle cx="50" cy="50" r="30" fill="#CDE5F7" stroke="#1C4475" stroke-width="4"/>
+  <circle cx="50" cy="50" r="20" fill="#EAF4FE" stroke="#1C4475" stroke-width="3"/>
+  <circle cx="50" cy="50" r="10" fill="#A78BFA" stroke="#7C5BD0" stroke-width="3"/>
+
+  <!-- center hit -->
+  <circle class="dart" cx="50" cy="50" r="4" fill="#E57399"/>
+</svg>

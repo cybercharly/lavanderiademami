@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Lavadora">
+  <style>
+    .drum   { transform-box: fill-box; transform-origin: 50px 56px; animation: spin 3.2s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .sud    { transform-box: fill-box; transform-origin: center; }
+    .s1 { animation: rise 2.6s ease-in-out infinite; }
+    .s2 { animation: rise 3.2s ease-in-out infinite 0.5s; }
+    .s3 { animation: rise 2.2s ease-in-out infinite 1s; }
+    @keyframes rise {
+      0%   { transform: translateY(0) scale(0.6); opacity: 0; }
+      30%  { opacity: 0.9; }
+      100% { transform: translateY(-14px) scale(1.1); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .drum, .sud { animation: none; }
+    }
+  </style>
+
+  <!-- body -->
+  <rect x="18" y="16" width="64" height="74" rx="12" fill="#FFFFFF" stroke="#1C4475" stroke-width="3.5"/>
+  <!-- control panel -->
+  <rect x="18" y="16" width="64" height="18" rx="12" fill="#CDE5F7"/>
+  <rect x="18" y="28" width="64" height="6" fill="#CDE5F7"/>
+  <circle cx="68" cy="25" r="4" fill="#E57399"/>
+  <circle cx="56" cy="25" r="2.4" fill="#A78BFA"/>
+  <rect x="24" y="22" width="16" height="6" rx="3" fill="#A78BFA"/>
+
+  <!-- rising suds above the door -->
+  <circle class="sud s1" cx="40" cy="44" r="3" fill="#A78BFA" fill-opacity="0.8"/>
+  <circle class="sud s2" cx="50" cy="42" r="3.6" fill="#E57399" fill-opacity="0.7"/>
+  <circle class="sud s3" cx="60" cy="44" r="2.6" fill="#CDE5F7"/>
+
+  <!-- door ring -->
+  <circle cx="50" cy="56" r="26" fill="#CDE5F7" stroke="#1C4475" stroke-width="3.5"/>
+  <circle cx="50" cy="56" r="20" fill="#EAF4FE" stroke="#A78BFA" stroke-width="2.5"/>
+
+  <!-- spinning drum + clothes -->
+  <g class="drum">
+    <circle cx="50" cy="56" r="20" fill="none"/>
+    <path d="M42 49 q-7 -6 1 -11 q4 5 9 0 q9 5 1 11 z" fill="#E57399"/>
+    <path d="M55 64 q8 -2 9 7 q-7 6 -13 1 q-2 -7 4 -8 z" fill="#A78BFA"/>
+    <rect x="36" y="58" width="13" height="11" rx="3" fill="#1C4475"/>
+    <!-- drum holes -->
+    <circle cx="50" cy="40" r="1.6" fill="#1C4475" fill-opacity="0.4"/>
+    <circle cx="66" cy="56" r="1.6" fill="#1C4475" fill-opacity="0.4"/>
+    <circle cx="50" cy="72" r="1.6" fill="#1C4475" fill-opacity="0.4"/>
+    <circle cx="34" cy="56" r="1.6" fill="#1C4475" fill-opacity="0.4"/>
+  </g>
+
+  <!-- door glass shine -->
+  <path d="M38 48 a17 17 0 0 1 9 -6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- feet -->
+  <rect x="24" y="90" width="8" height="6" rx="2" fill="#1C4475"/>
+  <rect x="68" y="90" width="8" height="6" rx="2" fill="#1C4475"/>
+</svg>
