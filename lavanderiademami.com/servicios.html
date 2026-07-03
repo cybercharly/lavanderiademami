@@ -36,8 +36,8 @@
   <div class="bg-brand-blue text-white text-xs sm:text-sm py-2 px-4">
     <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-y-1">
       <div class="flex items-center gap-4 flex-wrap">
-        <a href="tel:+523322562719" class="flex items-center gap-1 hover:text-brand-pink transition">
-          <i class="fas fa-phone text-brand-lavender"></i> +52 33 2256 2719
+        <a href="tel:+523321890028" class="flex items-center gap-1 hover:text-brand-pink transition">
+          <i class="fas fa-phone text-brand-lavender"></i> +52 33 2189 0028
         </a>
         <a href="mailto:contacto@lavanderiademami.com" class="hidden sm:flex items-center gap-1 hover:text-brand-pink transition">
           <i class="fas fa-envelope text-brand-lavender"></i> contacto@lavanderiademami.com
@@ -118,8 +118,8 @@
         <a data-wa="Hola, me interesa el servicio de lavado por encargo. ¿Me pueden dar precios?" class="btn-pink"><i class="fab fa-whatsapp"></i> Cotizar lavado</a>
       </div>
       <div class="reveal delay-100 flex justify-center">
-        <div class="bg-brand-sky rounded-3xl w-full max-w-sm aspect-square flex items-center justify-center p-6">
-          <img src="img/soap.svg" alt="Lavado" class="w-72 h-72">
+        <div class="rounded-3xl overflow-hidden w-full max-w-md shadow-lg">
+          <img src="img/lavado_por_encargo.png" alt="Lavado por encargo" class="w-full h-auto object-contain">
         </div>
       </div>
     </div>
@@ -142,8 +142,8 @@
         <a data-wa="Hola, me interesa el servicio de secado. ¿Me pueden dar precios?" class="btn-pink"><i class="fab fa-whatsapp"></i> Cotizar secado</a>
       </div>
       <div class="reveal delay-100 flex justify-center md:order-1">
-        <div class="bg-white rounded-3xl w-full max-w-sm aspect-square flex items-center justify-center p-12">
-          <img src="img/dry.svg" alt="Secado" class="w-48 h-48">
+        <div class="rounded-3xl overflow-hidden w-full max-w-md shadow-lg">
+          <img src="img/secado.png" alt="Secado" class="w-full h-auto object-contain">
         </div>
       </div>
     </div>
@@ -166,8 +166,8 @@
         <a data-wa="Hola, me interesa el servicio de planchado. ¿Me pueden dar precios?" class="btn-pink"><i class="fab fa-whatsapp"></i> Cotizar planchado</a>
       </div>
       <div class="reveal delay-100 flex justify-center">
-        <div class="bg-brand-lavender-soft rounded-3xl w-full max-w-sm aspect-square flex items-center justify-center p-6">
-          <img src="img/iron.svg" alt="Planchado" class="w-72 h-72">
+        <div class="rounded-3xl overflow-hidden w-full max-w-md shadow-lg">
+          <img src="img/planchado.png" alt="Planchado" class="w-full h-auto object-contain">
         </div>
       </div>
     </div>
@@ -190,8 +190,8 @@
         <a data-wa="Hola, me interesa rentar una lavadora de autoservicio. ¿Me pueden dar precios y horarios?" class="btn-pink"><i class="fab fa-whatsapp"></i> Consultar renta</a>
       </div>
       <div class="reveal delay-100 flex justify-center md:order-1">
-        <div class="bg-white rounded-3xl w-full max-w-sm aspect-square flex items-center justify-center p-12">
-          <img src="img/washer.svg" alt="Lavadora" class="w-48 h-48">
+        <div class="rounded-3xl overflow-hidden w-full max-w-md shadow-lg">
+          <img src="img/renta_de_lavadoras.png" alt="Renta de lavadoras" class="w-full h-auto object-contain">
         </div>
       </div>
     </div>
@@ -204,21 +204,30 @@
         <h2 class="text-3xl font-bold section-title">Y También...</h2>
         <p class="text-brand-blue-soft mt-6">Pequeños extras que hacen la diferencia</p>
       </div>
-      <div class="grid sm:grid-cols-3 gap-6">
-        <div class="service-card bg-white rounded-2xl p-6 shadow text-center reveal">
-          <img src="img/truck.svg" alt="Recolección y entrega" class="w-12 h-12 mx-auto mb-3">
-          <h3 class="font-bold text-brand-blue mb-2">Recolección y Entrega</h3>
-          <p class="text-brand-blue-soft text-sm">Pasamos por tu ropa y te la devolvemos lista en tu domicilio.</p>
+      <div class="grid sm:grid-cols-3 gap-6 items-stretch">
+        <div class="service-card shine-card bg-white rounded-2xl shadow overflow-hidden text-center reveal flex flex-col">
+          <i class="fas fa-star card-star"></i>
+          <img src="img/recoleccion.png" alt="Recolección y entrega" class="w-full h-72 object-contain bg-brand-sky/40">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-bold text-brand-blue mb-2">Recolección y Entrega</h3>
+            <p class="text-brand-blue-soft text-sm">Pasamos por tu ropa y te la devolvemos lista en tu domicilio.</p>
+          </div>
         </div>
-        <div class="service-card bg-white rounded-2xl p-6 shadow text-center reveal delay-100">
-          <img src="img/blanket.svg" alt="Edredones y cobijas" class="w-12 h-12 mx-auto mb-3">
-          <h3 class="font-bold text-brand-blue mb-2">Edredones y Cobijas</h3>
-          <p class="text-brand-blue-soft text-sm">Lavado especial para prendas grandes y de cama.</p>
+        <div class="service-card shine-card bg-white rounded-2xl shadow overflow-hidden text-center reveal delay-100 flex flex-col">
+          <i class="fas fa-star card-star"></i>
+          <img src="img/edredones.png" alt="Edredones y cobijas" class="w-full h-72 object-contain bg-brand-sky/40">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-bold text-brand-blue mb-2">Edredones y Cobijas</h3>
+            <p class="text-brand-blue-soft text-sm">Lavado especial para prendas grandes y de cama.</p>
+          </div>
         </div>
-        <div class="service-card bg-white rounded-2xl p-6 shadow text-center reveal delay-200">
-          <img src="img/business.svg" alt="Convenios para negocios" class="w-12 h-12 mx-auto mb-3">
-          <h3 class="font-bold text-brand-blue mb-2">Convenios para Negocios</h3>
-          <p class="text-brand-blue-soft text-sm">Servicio recurrente para restaurantes, spas y oficinas.</p>
+        <div class="service-card shine-card bg-white rounded-2xl shadow overflow-hidden text-center reveal delay-200 flex flex-col">
+          <i class="fas fa-star card-star"></i>
+          <img src="img/convenio.png" alt="Convenios para negocios" class="w-full h-72 object-contain bg-brand-sky/40">
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-bold text-brand-blue mb-2">Convenios para Negocios</h3>
+            <p class="text-brand-blue-soft text-sm">Servicio recurrente para restaurantes, spas y oficinas.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -263,11 +272,11 @@
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2">
               <i class="fas fa-map-marker-alt text-brand-lavender mt-1 shrink-0"></i>
-              <span>Dirección por confirmar · Guadalajara, Jal.</span>
+              <span>Calle Libertad 378A, Col. Potrero Nuevo, El Salto, Jal. C.P. 45680</span>
             </li>
             <li class="flex items-center gap-2">
               <i class="fab fa-whatsapp text-brand-pink"></i>
-              <a data-wa="" class="hover:text-brand-pink transition">+52 33 2256 2719</a>
+              <a data-wa="" class="hover:text-brand-pink transition">+52 33 2189 0028</a>
             </li>
             <li class="flex items-center gap-2">
               <i class="fas fa-envelope text-brand-lavender"></i>
@@ -281,7 +290,7 @@
         </div>
       </div>
       <div class="border-t border-brand-blue-soft pt-6 text-center text-sm text-brand-sky/70">
-        © <span data-year>2026</span> La Lavandería de Mami. Todos los derechos reservados. Guadalajara, Jalisco, México.
+        © <span data-year>2026</span> La Lavandería de Mami. Todos los derechos reservados. El Salto, Jalisco, México.
         <div class="mt-1 text-xs text-brand-sky/50">Diseño y desarrollo por <a href="https://www.linkedin.com/in/jcprzhdz/" target="_blank" rel="noopener" class="hover:text-brand-pink transition">cybercharly</a></div>
       </div>
     </div>

@@ -161,6 +161,54 @@ body {
   box-shadow: 0 16px 38px rgba(28, 68, 117, 0.14);
 }
 
+/* ---- Shine / glowing card (with sweeping shimmer + golden glow) ---- */
+.shine-card {
+  position: relative;
+  animation: cardGlow 3s ease-in-out infinite;
+}
+.shine-card:hover { animation-play-state: paused; }
+@keyframes cardGlow {
+  0%, 100% { box-shadow: 0 6px 20px rgba(28, 68, 117, 0.10); }
+  50%      { box-shadow: 0 0 26px rgba(245, 197, 24, 0.55), 0 10px 26px rgba(28, 68, 117, 0.12); }
+}
+/* diagonal light sweep across the card */
+.shine-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 28%, rgba(255, 255, 255, 0.55) 50%, transparent 72%);
+  transform: translateX(-130%);
+  animation: cardSweep 4.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes cardSweep {
+  0%       { transform: translateX(-130%); }
+  55%,100% { transform: translateX(130%); }
+}
+
+/* ---- Perpetual golden twinkling star (top-right corner) ---- */
+.card-star {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  z-index: 3;
+  color: #F5C518;
+  font-size: 1.35rem;
+  filter: drop-shadow(0 0 5px rgba(245, 197, 24, 0.9));
+  animation: starTwinkle 1.8s ease-in-out infinite;
+}
+@keyframes starTwinkle {
+  0%, 100% { transform: scale(0.8) rotate(0deg);   opacity: 0.75; }
+  50%      { transform: scale(1.25) rotate(22deg);  opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-card { animation: none; }
+  .shine-card::after { animation: none; opacity: 0; }
+  .card-star { animation: none; }
+}
+
 /* ---- Section title accent ---- */
 .section-title { color: var(--color-blue); }
 .section-title::after {

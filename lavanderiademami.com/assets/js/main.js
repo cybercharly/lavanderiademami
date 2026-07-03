@@ -3,7 +3,7 @@
 // ================================================
 
 // --- Configuración central ---
-const WHATSAPP_NUMBER = '523322562719'; // número con lada, formato wa.me
+const WHATSAPP_NUMBER = '523321890028'; // número con lada, formato wa.me
 const DEFAULT_WA_MSG  = 'Hola, los encontré en su sitio web y quisiera información sobre sus servicios de lavandería. ¿Me pueden ayudar?';
 
 // --- Construye todos los links de WhatsApp a partir de data-wa="mensaje" ---
